@@ -2,7 +2,7 @@
 
 ## 概述
 
-**yiliphoton_lidar_sdk** 是一力光子为 V192 激光雷达配套的纯 C++ 驱动库，不依赖 ROS，可直接集成到任意 Linux/Windows 工程中。
+**yiliphoton_lidar_sdk** 是一力光子为 V192 / P60 激光雷达配套的纯 C++ 驱动库，不依赖 ROS，可直接集成到任意 Linux/Windows 工程中。
 
 ```
   +---------------------------+
@@ -21,7 +21,8 @@
 
 | 型号 | 类型 |
 |------|------|
-| V192 | 转镜，192 线 |
+| V192 | 192 线 |
+| P60  | 96 通道 |
 
 ### 支持的点类型
 
@@ -42,6 +43,7 @@ yiliphoton_lidar_sdk/
 │   ├── common/              # 日志、错误码、缓冲区等
 │   ├── driver/
 │   │   ├── decoder/V192/    # V192 解码器
+│   │   ├── decoder/P60/     # P60 解码器
 │   │   ├── algorithm/       # 软件滤波接口
 │   │   └── input/           # UDP / PCAP 输入
 │   └── msg/                 # 点云消息定义
@@ -105,7 +107,7 @@ cmake .. -DDISABLE_PCAP_PARSE=ON -DCOMPILE_DEMOS=ON
 运行前请确认 `demo_online.cpp` 中的参数与实际雷达一致：
 
 ```cpp
-param.lidar_type = LidarType::V192;
+param.lidar_type = LidarType::V192;   // 或 LidarType::P60
 param.input_param.msop_port  = 8899;   // MSOP 端口
 param.input_param.difop_port = 9988;   // DIFOP 端口
 ```
@@ -151,16 +153,18 @@ target_link_libraries(your_target
 
 ## 标定文件
 
-V192 雷达需要加载标定文件以获得最佳精度。标定文件位于：
+V192 / P60 雷达需要加载标定文件以获得最佳精度。标定文件位于：
 
 ```
 src/ylp_driver/config/V192-Correction.json
+src/ylp_driver/config/P60-Correction.json
 ```
 
 在驱动参数中指定：
 
 ```cpp
-param.decoder_param.calib_file = "V192-Correction.json";
+param.decoder_param.calib_file = "V192-Correction.json";  // V192 用
+param.decoder_param.calib_file = "P60-Correction.json";   // P60 用
 ```
 
 ---

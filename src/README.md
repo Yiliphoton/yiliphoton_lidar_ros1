@@ -2,7 +2,7 @@
 
 ## 概述
 
-**yiliphoton_lidar_ros1** 是一力光子 V192 激光雷达的 ROS1 驱动软件包，基于 `yiliphoton_lidar_sdk` 构建，提供标准 ROS1 话题接口，可直接配合 RViz 查看点云。
+**yiliphoton_lidar_ros1** 是一力光子 V192 / P60 激光雷达的 ROS1 驱动软件包，基于 `yiliphoton_lidar_sdk` 构建，提供标准 ROS1 话题接口，可直接配合 RViz 查看点云。
 
 ```
   +----------------------------------+
@@ -41,6 +41,13 @@
 | XYZI | x, y, z, intensity |
 | XYZIRT | x, y, z, intensity, ring, timestamp, range |
 | XYZIRTC | x, y, z, intensity, ring, timestamp, range, rgb |
+
+### 支持的雷达型号
+
+| 型号 | 类型 |
+|------|------|
+| V192 | 192 线 |
+| P60  | 96 通道 |
 
 ---
 
@@ -156,7 +163,7 @@ common:
 ```yaml
 lidar:
   - driver:
-      lidar_type: V192         # 雷达型号，固定为 V192
+      lidar_type: V192         # 雷达型号，V192 或 P60
       msop_port: 8899          # MSOP 数据端口
       difop_port: 9988         # DIFOP 配置端口
       min_distance: 0.01       # 最小有效距离（米）
