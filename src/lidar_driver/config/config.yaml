@@ -1,0 +1,42 @@
+common:
+  msg_source: 1                    # 0: not use Lidar
+                                   # 1: packet message comes from online Lidar
+                                   # 2: packet message comes from ROS or ROS2
+                                   # 3: packet message comes from Pcap file
+  send_packet_ros: false           # true: Send packets through ROS or ROS2 (Used to record packet)
+  send_point_cloud_ros: true       # true: Send point cloud through ROS or ROS2
+                                   # true: Subscribe the imu ROS topic to do motion_compensation
+lidar:
+  - driver:
+      lidar_type: P60              # LiDAR type - V192, P60, P60_IMU
+      echo_option: 0              # 0: merge; 1: first echo; 2: second echo; 3: dual echo
+      msop_port:  8899            # Msop port of lidar
+      difop_port: 0                # Difop port of lidar (not used by P60/P60_IMU/V192)
+      wait_for_difop: false        # Wait for difop packet
+      dense_points: false          # dense point clouds
+      min_distance: 0.01            # Minimum distance of point cloud
+      max_distance: 500            # Maximum distance of point cloud
+      use_lidar_clock: false       # True: Use the lidar clock as the message timestamp
+                                   # False: Use the system clock as the timestamp
+      write_pkt_ts: false          # rewrite pkt timestamp or not; (prerequisite: use_lidar_clock must be false)
+      pcap_path: /home/user/data/10_open_intensity.pcap # The path of pcap file
+      pcap_repeat: true           # Repeat play the pcap file
+      pcap_rate: 1.0
+      enable_fov_aligned: false    # Adjust point angle, maybe resize the frame
+      process_by_thread: true      # Process point cloud data by thread
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      roll: 0.0
+      elevation: 0.0
+      azimuth: 0.0
+    ros:
+      ros_frame_id: lidar                            # Legacy alias for LiDAR/packet frame
+      ros_lidar_frame_id: lidar                       # Point cloud and packet frame
+      ros_imu_frame_id: imu_link                      # IMU measurement frame (P60_IMU)
+      ros_recv_packet_topic: /lidar_packets          # Topic used to receive lidar packets from ROS
+      ros_send_packet_topic: /lidar_packets          # Topic used to send lidar packets through ROS
+      ros_send_point_cloud_topic: /lidar_points      # Topic used to send point cloud through ROS
+      ros_send_imu_topic: /lidar_imu                 # Topic used to send IMU data through ROS (P60_IMU only)
+      ros_recv_imu_topic: /imu                       # Topic used to receive imu data from ROS
+

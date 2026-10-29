@@ -608,7 +608,7 @@ int main (int argc, char **argv)
     pub     = nh.advertise<sensor_msgs::Image>("/ag_points",     100);
     pub_rgb = nh.advertise<sensor_msgs::Image>("/ag_points_rgb", 100);
 
-    ros::Subscriber mapSub = nh.subscribe("/aglidar_points", 100, PointCallback);
+    ros::Subscriber mapSub = nh.subscribe("/lidar_points", 100, PointCallback);
 
     ros::spin();
     return 0;

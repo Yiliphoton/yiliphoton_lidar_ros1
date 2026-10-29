@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>pcl_ros_bag_to_pcd</name>
-  <version>1.0.0</version>
-  <description>Save Yiliphoton point cloud frames as PCD files</description>
-  <maintainer email="support@yiliphoton.com">Yiliphoton</maintainer>
+  <version>1.1.1</version>
+  <description>Save LiDAR point cloud frames as PCD files</description>
+  <maintainer email="support@lidar.com">LiDAR</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>

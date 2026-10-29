@@ -22,7 +22,7 @@ int main(int argc, char** argv)
   signal(SIGINT, sigHandler);
   ros::init(argc, argv, "bag_to_pcd");
   ros::NodeHandle nh;
-  ros::Subscriber sub = nh.subscribe("/ylplidar_points", 10, pointcloud_callback);
+  ros::Subscriber sub = nh.subscribe("/lidar_points", 10, pointcloud_callback);
   ros::spin();
   return 0;
 }

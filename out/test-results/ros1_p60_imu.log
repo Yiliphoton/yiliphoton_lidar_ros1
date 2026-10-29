@@ -1,0 +1,121 @@
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             A2 Algorithm Parameters 0402 [0m
+[32m------------------------------------------------------[0m
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             PointCloud Filter Parameters [0m
+[32mfilterFlag: 1[0m
+[32mgroundProtectFlag: 0[0m
+[32mground_angle_threshold: 5[0m
+[32mgHIdx: 60[0m
+[32mgLIdx: 0[0m
+[32mdiffIdx: 12[0m
+[32mdis_fixed: 400[0m
+[32mdis_thread_fixed: 30[0m
+[32mdis_delta: 3000[0m
+[32mdis_k: 10[0m
+[32mdis_thread_dy: 30[0m
+[32mnum_thread_dy: 4[0m
+[32mground_protect_dis: 6500[0m
+[32msensorMountAngle: 0[0m
+[32mdis_seg: [32m3000,[32m8000,[32m50000,[1m[32m[0m
+[32mthres_func_param: [0m
+[32m3000,[32m0,[32m1000,[32m3,[32m130,[1m[32m[0m
+[32m3000,[32m37,[32m1000,[32m2,[32m130,[1m[32m[0m
+[32m3000,[32m37,[32m1000,[32m2,[32m130,[1m[32m[0m
+[32msmooth_flag: 0[0m
+[32mfix_ground_walkerror_flag: 0[0m
+[32mcheck_neibor_num: 1[0m
+[32mneibor_interval: 1[0m
+[32mvalid_num_thres: 0[0m
+[32mclose_dis_thres: 50[0m
+[32malgo_version_nf: 1[0m
+[32mgroundCompensationFlag: 2[0m
+[32mgroundDisThr: 0.233[0m
+[32mgroundCompensationThr: 600[0m
+[32minter_process_flag: 1[0m
+[32minter_dis_thres: 500[0m
+[32mplanar_assist_filter_flag: 1[0m
+[32mplanar_assist_thres: 0.05[0m
+[32mcolor_debug: 0[0m
+[32mground_filter_flag: 1[0m
+[32mground_filter_params: [0m
+[32m3000,[32m0,[32m1000,[32m2,[32m300,[1m[32m[0m
+[32m3000,[32m0,[32m1000,[32m1,[32m500,[1m[32m[0m
+[32m3000,[32m0,[32m1000,[32m1,[32m500,[1m[32m[0m
+[32mground_unprotect_dis: 1000[0m
+[32mref_calib_flag: 1[0m
+[32mref_set_params: [32m-60,[32m0,[32m0,[32m200,[32m70,[32m100,[32m170,[32m-15,[32m-15,[32m-20,[32m-60,[1m[32m[0m
+[32m------------------------------------------------------[0m
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             Crosstalk Filter Parameters [0m
+[32memission_num: 4[0m
+[32mhref_pos_th: 20[0m
+[32mcrosstalk_dis_th: 40[0m
+[32mabnorm_width_th: 80[0m
+[32mpeak_select_flag: 1[0m
+[32mcol_helper_flag: 0[0m
+[32mdy_pw_refer_flag: 0[0m
+[32mhigh_out_flag: 1[0m
+[32mvalid_echo_assist_flag: 0[0m
+[32mratio_high: 0[0m
+[32mratio_low: 0[0m
+[32mecho_select: [32m1,[32m1,[1m[32m[0m
+[32mkey_dis: [32m3000,[32m50000,[1m[32m[0m
+[32mthres_func_param: [0m
+[32m0,[32m200,[1m[32m[0m
+[32m0,[32m180,[1m[32m[0m
+[32mneibor_key_dis: [32m3500,[32m5000,[32m50000,[1m[32m[0m
+[32mneibor_value_param: [0m
+[32m4,[32m4,[1m[32m[0m
+[32m1,[32m1,[1m[32m[0m
+[32m1,[32m1,[1m[32m[0m
+[32mecho_option: 0[0m
+[32mrefer_option: 0[0m
+[32mpw_define_option: 2[0m
+[32muse_path_protect_flag: 0[0m
+[32muse_path_filter_flag: 1[0m
+[32muse_path_filter_dis: 350[0m
+[32muse_path_protect_dis: 30[0m
+[32mfake_high_filter_flag: 1[0m
+[32mfake_high_filter_hight: 400[0m
+[32mfake_high_filter_harder_flag: 1[0m
+[32mfake_high_filter_harder_hight: 700[0m
+[32mfake_path_filter_flag: 0[0m
+[32mfake_use_ld_all_flag: 0[0m
+[32mfake_down_pixel_num: 12[0m
+[32mlow_ref_set_value: 30[0m
+[32mlow_ref_set_flag: 0[0m
+[32mweak_repair_flag: 1[0m
+[32mweak_repair_dis_thres: 150[0m
+[32mpeak_filter_flag: 1[0m
+[32mpeak_filter_float_assist_flag: 1[0m
+[32mpeak_thres_offset: 150[0m
+[32mrun_init_once_flag: 0[0m
+[32mgf_scale_max_height: 50[0m
+[32mneed_valid_neighbor_num: 1[0m
+[32mgf_scale_assist_flag: 1[0m
+[32m------------------------------------------------------[0m
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             Plane Ghost Filter Parameters [0m
+[32mz_plane_threshold: 0.1[0m
+[32m------------------------------------------------------[0m
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             trailingFilter Parameters [0m
+[32menable: 1[0m
+[32mdthr0: 100[0m
+[32mdthr1: 310[0m
+[32mdthr2: 30[0m
+[32mdthr4: 20000[0m
+[32mphithr: 70[0m
+[32mkslop: 0.3[0m
+[32m------------------------------------------------------[0m
+[1m[32m-------------------------------------------------------[0m
+[1m[32m             RangeImageSmooth Parameters [0m
+[32mhalf_azimuth: 2[0m
+[32mhalf_ring: 1[0m
+[32mratio_thr: 0.015[0m
+[32mmin_valid: 4[0m
+[32m------------------------------------------------------[0m
+[1m[37m[P60] calib_file=/workspace/sdk_release/lidar_driver_ros1/../lidar_driver_ros1/src/lidar_driver/src/driver_sdk/src/lidar_sdk/config/P60-Correction.json IsCalibrated=1[0m
+[1m[37m[P60] elevation[0]=50 elevation[47]=20.625 elevation[95]=-9.375[0m
+ROS1_PCAP_RESULT model=P60_IMU frames=10 target=10 imu=899 invalid=204214 residual=0 eof=0

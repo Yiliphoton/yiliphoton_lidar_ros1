@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>depth_make</name>
-  <version>1.0.0</version>
-  <description>Converts Yiliphoton V192 point cloud to depth/RGB images</description>
-  <maintainer email="support@yiliphoton.com">Yiliphoton</maintainer>
+  <version>1.1.1</version>
+  <description>Converts LiDAR V192 point cloud to depth/RGB images</description>
+  <maintainer email="support@lidar.com">LiDAR</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
